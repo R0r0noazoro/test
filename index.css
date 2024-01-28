@@ -1,0 +1,105 @@
+.mainbody {
+    display: flex;
+    justify-content: space-around; /* Adjust this to change the space between divs */
+  }
+.left{
+    width: 550px;
+    height: 650px; 
+    background-color: blue;
+    margin-right: 30px;
+    
+}
+.middle{
+    width: 700px;
+    height: 650px;
+    background-color: rgb(255, 0, 0); 
+    margin-left: 200px;
+}
+.right{
+    width: 550px;
+    height: 650px; 
+    
+    background-color: yellow; 
+   
+    
+
+
+}
+#game-container {
+    width: 500px;
+    height: 650px;
+    border: 1px solid #000;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+#player {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0; /* Align to the bottom of the game container */
+    left: 0;   /* Start from the left edge */
+    
+}
+
+button {
+    margin: 10px;
+}
+.moving-div {
+    width: 30px;
+    height: 30px;
+  
+    position: absolute;
+    animation-duration: 5s; /* Duration of the animation */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.left {
+    animation-name: moveDownLeft;
+    animation-delay: 0s; 
+    left: 0;
+    margin-left: 30px;
+}
+
+.middle {
+    animation-name: moveDownMiddle;
+    animation-delay: 2s; 
+    left: 50%; /* Start from the middle of the game container */
+    transform: translateX(-50%); /* Adjust to center the div */
+}
+
+.right {
+    animation-name: moveDownRight;
+    animation-delay: 3s; 
+    right: 0;
+    margin-right: 30px;
+}
+
+@keyframes moveDownLeft {
+    from {
+        top: 0;
+    }
+    to {
+        top: 100%; /* Move to the bottom of the game container */
+    }
+}
+
+@keyframes moveDownMiddle {
+    from {
+        top: 0;
+    }
+    to {
+        top: 100%; /* Move to the bottom of the game container */
+    }
+}
+
+@keyframes moveDownRight {
+    from {
+        top: 0;
+    }
+    to {
+        top: 100%; /* Move to the bottom of the game container */
+    }
+}
